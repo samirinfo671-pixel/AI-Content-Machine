@@ -14,19 +14,26 @@ if (!isset($_SERVER['PHP_AUTH_USER']) || $_SERVER['PHP_AUTH_PW'] != $admin_passw
     exit;
 }
 
-$sales_file = 'sales.csv';
+$google_script_url = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE'; 
+
 $total_revenue = 0;
 $sales_count = 0;
 $sales_data = [];
 
-if (file_exists($sales_file)) {
-    if (($handle = fopen($sales_file, "r")) !== FALSE) {
-        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-            $sales_data[] = $data;
-            $total_revenue += (float)$data[4];
+$response = file_get_contents($google_script_url);
+if ($response) {
+    $raw_data = json_decode($response, true);
+    if (is_array($raw_data)) {
+        // Skip header row if it exists (check if first element is 'Date' or similar)
+        if (count($raw_data) > 0 && strpos(strtolower($raw_data[0][0]), 'date') !== false) {
+            array_shift($raw_data);
+        }
+        
+        foreach ($raw_data as $row) {
+            $sales_data[] = $row;
+            $total_revenue += (float)$row[4];
             $sales_count++;
         }
-        fclose($handle);
     }
 }
 

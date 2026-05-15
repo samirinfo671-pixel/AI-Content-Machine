@@ -22,21 +22,27 @@ $account  = $ordernum;
 $desc     = 'Full Bundle: ' . $plan_name . ' (' . $ordernum . ')';
 $amount   = number_format($amount_form, 2, '.', ''); 
 
-// 4. LOG THE SALE (BEFORE REDIRECT)
-// This saves the email, amount, and order number to a CSV file
+// 4. LOG THE SALE TO GOOGLE SHEETS (Vercel compatible)
+$google_script_url = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE'; 
+
 $log_data = [
-    date('Y-m-d H:i:s'),
-    $customer_email,
-    $customer_country,
-    $traffic_source,
-    $amount,
-    $currency_form,
-    $ordernum,
-    $_SERVER['REMOTE_ADDR']
+    'date' => date('Y-m-d H:i:s'),
+    'email' => $customer_email,
+    'country' => $customer_country,
+    'source' => $traffic_source,
+    'amount' => $amount,
+    'currency' => $currency_form,
+    'order_id' => $ordernum,
+    'ip' => $_SERVER['REMOTE_ADDR']
 ];
-$file = fopen('sales.csv', 'a');
-fputcsv($file, $log_data);
-fclose($file);
+
+$ch = curl_init($google_script_url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($log_data));
+curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // Important for Apps Script redirects
+curl_exec($ch);
+curl_close($ch);
 
 // 5. GENERATE SECURITY HASH FOR SUCCESS REDIRECT (Verification)
 $secure_hash = hash('sha256', $ordernum . $secret_key);
