@@ -5,8 +5,8 @@
  */
 
 // 1. SECURE CONFIGURATION
-$public_key = 'e6d21-558'; // New key provided by user
-$secret_key = '6bb9921ce152246da82efd31392e7640'; 
+$public_key = '69ccb-597'; 
+$secret_key = '869ccbc481e2930d0f22ab5fbb41344e'; 
 
 // 2. RETRIEVE & SANITIZE DATA
 $plan_name    = isset($_POST['plan_name']) ? strip_tags($_POST['plan_name']) : 'The AI Content Machine Bundle';
