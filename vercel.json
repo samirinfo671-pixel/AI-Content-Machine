@@ -1,12 +1,13 @@
 {
   "functions": {
     "api/*.php": {
-      "runtime": "vercel-php@0.9.0"
+      "runtime": "vercel-php@0.6.0"
     }
   },
-  "rewrites": [
-    { "source": "/admin.php", "destination": "/api/admin.php" },
-    { "source": "/process_payment.php", "destination": "/api/process_payment.php" },
-    { "source": "/success.php", "destination": "/api/success.php" }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/admin.php", "dest": "/api/admin.php" },
+    { "src": "/process_payment.php", "dest": "/api/process_payment.php" },
+    { "src": "/success.php", "dest": "/api/success.php" }
   ]
 }
