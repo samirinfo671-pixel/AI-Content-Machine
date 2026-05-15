@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+ini_set('display_errors', 0);
 /**
  * THE AI CONTENT MACHINE - PAYMENT PROCESSOR (Pay4Bit)
  * Updated to use GET redirect as requested by user.
@@ -57,7 +59,6 @@ $params = [
     'currency'   => $currency_form,
     'account'    => $account,
     'desc'       => $desc,
-    'sign'       => $check_sign, // Added for security
     'success_url' => $success_url,
     'fail_url'    => $fail_url
 ];
