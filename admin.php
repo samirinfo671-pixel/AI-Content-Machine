@@ -14,7 +14,7 @@ if (!isset($_SERVER['PHP_AUTH_USER']) || $_SERVER['PHP_AUTH_PW'] != $admin_passw
     exit;
 }
 
-$google_script_url = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE'; 
+$google_script_url = 'https://script.google.com/macros/s/AKfycbz7IXqmd4z55wyLDfn6jzNQlLAN3IoEgVbSYTCEaaonKsSNA_yQ5RSxC0hDVbVkBAHr/exec'; 
 
 $total_revenue = 0;
 $sales_count = 0;

@@ -23,7 +23,7 @@ $desc     = 'Full Bundle: ' . $plan_name . ' (' . $ordernum . ')';
 $amount   = number_format($amount_form, 2, '.', ''); 
 
 // 4. LOG THE SALE TO GOOGLE SHEETS (Vercel compatible)
-$google_script_url = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE'; 
+$google_script_url = 'https://script.google.com/macros/s/AKfycbz7IXqmd4z55wyLDfn6jzNQlLAN3IoEgVbSYTCEaaonKsSNA_yQ5RSxC0hDVbVkBAHr/exec'; 
 
 $log_data = [
     'date' => date('Y-m-d H:i:s'),
