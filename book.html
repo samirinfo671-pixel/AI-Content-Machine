@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE AI CONTENT MACHINE — Complete Premium Playbook (Final Master Edition)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #F59E0B;
+            --primary-dark: #D97706;
+            --bg: #0F172A;
+            --card-bg: #1E293B;
+            --text: #F8FAFC;
+            --text-muted: #94A3B8;
+            --accent: #7C3AED;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        @page { size: A4; margin: 0; }
+        * { box-sizing: border-box; }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* PREMIUM COVER */
+        .cover {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1E293B 0%, #0F172A 100%);
+            padding: 40px;
+            position: relative;
+        }
+        .title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(48px, 10vw, 90px);
+            font-weight: 900;
+            line-height: 1;
+            margin: 0;
+            background: linear-gradient(135deg, #FFF 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 24px;
+            color: var(--text-muted);
+            margin-top: 24px;
+            max-width: 800px;
+            font-weight: 500;
+        }
+
+        /* TABLE OF CONTENTS */
+        .toc {
+            background: var(--card-bg);
+            padding: 60px 40px;
+            border-bottom: 1px solid var(--border);
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .toc-link {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        .toc-link:hover { color: var(--primary); background: rgba(255,255,255,0.05); }
+
+        /* CONTENT STYLING */
+        section { padding: 100px 0; border-bottom: 1px solid var(--border); }
+        h1 { font-family: 'Poppins', sans-serif; font-size: 48px; font-weight: 900; color: var(--primary); margin-bottom: 40px; }
+        h2 { font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: 800; margin-top: 60px; color: #FFF; border-left: 5px solid var(--primary); padding-left: 20px; }
+        h3 { font-size: 24px; color: #FFF; margin-top: 40px; font-weight: 700; }
+        p { font-size: 19px; margin-bottom: 25px; color: #CBD5E1; }
+        
+        ul { margin-bottom: 30px; padding-left: 25px; }
+        li { margin-bottom: 15px; font-size: 18px; color: #CBD5E1; }
+        li strong { color: var(--primary); }
+
+        .prompt-box {
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            padding: 35px;
+            border-radius: 24px;
+            margin: 45px 0;
+            position: relative;
+            font-style: italic;
+            font-family: 'Courier New', monospace;
+            font-size: 17px;
+            color: #E2E8F0;
+        }
+        .prompt-box::before {
+            content: "MASTER AI PROMPT";
+            position: absolute;
+            top: -14px;
+            left: 30px;
+            background: var(--accent);
+            color: #FFF;
+            padding: 5px 18px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 900;
+            font-style: normal;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .action-card {
+            background: rgba(245, 158, 11, 0.05);
+            border: 1px dashed var(--primary);
+            padding: 30px;
+            border-radius: 16px;
+            margin: 30px 0;
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            body { background: #FFF; color: #000; }
+            section { page-break-before: always; padding: 60px; border: none; }
+            h1, h2, h3 { color: #000 !important; border-color: #000; }
+            p, li { color: #111 !important; }
+            .prompt-box { background: #F9FAFB; border: 1px solid #AAA; color: #000; }
+            .toc, .cover { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- COVER -->
+    <div class="cover">
+        <h1 class="title">THE AI CONTENT<br>MACHINE</h1>
+        <p class="subtitle">Complete Master Playbook — May 2026 Edition<br>Run your entire content empire on autopilot.</p>
+        <div style="margin-top: 50px; font-weight: 800; color: var(--primary); letter-spacing: 2px;">WORK 2 HOURS. PUBLISH 30 DAYS. EARN DAILY.</div>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+        <div class="container">
+            <h2 style="margin-top:0; border:none; padding:0;">Table of Contents</h2>
+            <div class="toc-grid">
+                <a href="#intro" class="toc-link">Introduction: The Burnout Trap</a>
+                <a href="#ch1" class="toc-link">Chapter 1: The 5 Free Tools</a>
+                <a href="#ch2" class="toc-link">Chapter 2: The Master Workflow</a>
+                <a href="#ch3" class="toc-link">Chapter 3: The 1 Idea → 10 Outputs</a>
+                <a href="#ch4" class="toc-link">Chapter 4: Viral AI Captions</a>
+                <a href="#ch5" class="toc-link">Chapter 5: Short-Form Video Formula</a>
+                <a href="#ch8" class="toc-link">Chapter 8: Automating with Make.com</a>
+                <a href="#ch10" class="toc-link">Chapter 10: Scaling & Selling</a>
+                <a href="#ch11" class="toc-link">Chapter 11: The Zero-to-100k Roadmap</a>
+                <a href="#conclusion" class="toc-link">Conclusion: Your Empire Starts Now</a>
+                <a href="#prompts" class="toc-link" style="color: var(--primary);">BONUS: 50 DONE-FOR-YOU PROMPTS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- INTRODUCTION -->
+        <section id="intro">
+            <h1>INTRODUCTION</h1>
+            <h2>Why 95% of Creators Burn Out — And How AI Changes Everything</h2>
+            <p>Imagine this: It’s 11:00 PM on a Sunday night. You’re hunched over your laptop, eyes strained from the blue light, trying to finish one more Instagram caption, one more Reel edit, or one more email newsletter. You’ve spent over 40 hours this week "creating content," but when you look at your engagement stats or your bank account, the needle has barely moved.</p>
+            <p>Does that sound familiar? If it does, you’re not alone. In fact, you’re part of the 95% of creators who are stuck on the "content hamster wheel"—working full-time hours for part-time results, constantly chasing the next algorithm update, and feeling the heavy shadow of burnout creeping in.</p>
+            <p>But here is the truth that the most successful 5% of creators won't tell you: They aren't working harder than you. They are just using a different machine.</p>
+            <p>Welcome to 2026. The world of content creation has shifted on its axis. The days of manual labor in social media are over. We are now in the era of the "AI Content Machine," and it is the most significant opportunity for freelancers, entrepreneurs, and creators in the last decade.</p>
+            <p>In this book, you will learn:</p>
+            <ul>
+                <li><strong>The "1 Idea → 10 Outputs" System:</strong> How to take one single thought and explode it into a month's worth of content across every major platform.</li>
+                <li><strong>No-Code Automation Blueprints:</strong> How to set up "digital employees" that work 24/7 to post your content and manage your DMs while you sleep.</li>
+                <li><strong>The Monetization Roadmap:</strong> How to stop chasing likes and start chasing dollars by packaging your new AI skills into high-ticket services or digital products.</li>
+            </ul>
+        </section>
+
+        <!-- CHAPTER 1 -->
+        <section id="ch1">
+            <h1>CHAPTER 1</h1>
+            <h2>The 5 Free Tools That Run Your Business</h2>
+            <p>To build a world-class content machine, you don’t need a $10,000 studio or a team of ten employees. You just need the right toolkit. The following five tools are the "pillars" of your automated business.</p>
+            
+            <h3>1. ChatGPT (The Brain)</h3>
+            <p>ChatGPT is the command center of your operation. It handles everything related to strategy, writing, and ideation. Whether you need a 30-day content calendar, a viral TikTok script, or a persuasive sales email, ChatGPT is the "digital brain" that does the thinking for you.</p>
+            <ul>
+                <li><strong>Why it's essential:</strong> It removes the "blank page" problem. You never have to stare at a cursor again. It can emulate your voice, research your niche, and generate thousands of words in seconds.</li>
+                <li><strong>Best free feature:</strong> The ability to provide "Custom Instructions." You can tell ChatGPT exactly who you are and what your brand voice sounds like once, and it will remember it for every single prompt.</li>
+            </ul>
+
+            <h3>2. Canva (The Designer)</h3>
+            <p>Canva has democratized design. You no longer need to spend years learning Photoshop to create stunning Instagram carousels, Pinterest pins, or ebook covers. Canva provides the "digital hands" that turn your text into beautiful visuals.</p>
+
+            <h3>3. CapCut (The Editor)</h3>
+            <p>Short-form video is the king of 2026. CapCut is the most powerful video editor for creators because it is built specifically for viral social media formats. It handles the "digital voice and movement" of your brand.</p>
+
+            <h3>4. Notion (The Manager)</h3>
+            <p>If your business is a machine, Notion is the "blueprint." It is where you organize your thoughts, store your prompt library, and manage your content calendar.</p>
+
+            <h3>5. Make.com (The Engine)</h3>
+            <p>This is the "glue" that holds everything together. Make.com is an automation platform that allows your different tools to talk to each other.</p>
+        </section>
+
+        <!-- CHAPTER 2 -->
+        <section id="ch2">
+            <h1>CHAPTER 2</h1>
+            <h2>The 2-Hour Work Week: The Master Workflow</h2>
+            <p>The AI Content Machine is built on **Batching**. We do not create content daily. We create it once a month, in a single 2-hour "Deep Work" session. Here is your master workflow for producing 30 days of content in 120 minutes.</p>
+            
+            <div class="action-card">
+                <h3>The 120-Minute Breakdown</h3>
+                <ul>
+                    <li><strong>Minutes 0–15: The Ideation Sprint (ChatGPT).</strong> Your first 15 minutes are spent finding 4 "Main Pillars"—the core topics you will talk about this month. Feed ChatGPT your niche and ask for Educational, Inspirational, and Controversial topics.</li>
+                    <li><strong>Minutes 15–45: The Writing Batch (ChatGPT).</strong> Now, turn those ideas into text. Use a "Mega Prompt" to tell ChatGPT to write the captions for all 12 ideas at once.</li>
+                    <li><strong>Minutes 45–90: The Visual Factory (Canva & CapCut).</strong> Open Canva and use the "Bulk Create" feature to turn your 12 ideas into stunning carousels in one go.</li>
+                    <li><strong>Minutes 90–120: The Automation Hookup (Notion & Make.com).</strong> Upload your assets to your Notion content calendar. Trigger your Make.com automation to queue all 30 days of content.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CHAPTER 3 -->
+        <section id="ch3">
+            <h1>CHAPTER 3</h1>
+            <h2>The "1 Idea → 10 Outputs" System</h2>
+            <p>In the AI world, you write one "Pillar" and explode it into a galaxy of content.</p>
+            <h3>The Repurposing Pyramid</h3>
+            <ul>
+                <li><strong>Step 1: Long-Form Video → 5 Shorts.</strong> Identify the 5 most high-impact segments and write punchy hooks.</li>
+                <li><strong>Step 2: One Article → 10 Tweets + 3 LinkedIn Posts.</strong> Ask AI to act as a viral ghostwriter.</li>
+                <li><strong>Step 3: One Script → One Newsletter.</strong> Transform the script into a conversational email.</li>
+            </ul>
+            <div class="prompt-box">
+                "I have this core idea: [INSERT IDEA]. I want to explode this into a full content ecosystem. Please provide: 1. A 3-part Instagram Carousel outline, 2. A 30-second TikTok script, 3. A 280-character high-value Tweet, 4. A professional LinkedIn post, and 5. A 5-sentence email teaser."
+            </div>
+        </section>
+
+        <!-- CHAPTER 8 -->
+        <section id="ch8">
+            <h1>CHAPTER 8</h1>
+            <h2>Automating the Machine with Make.com</h2>
+            <p>If you are still manually logging into Instagram to post your content, you are a slave to the platform. To be a machine, you must automate.</p>
+            <div class="action-card">
+                <h3>Your First Automation Blueprint</h3>
+                <ul>
+                    <li><strong>Select App 1 (Notion):</strong> Watch for Status = "Post Now".</li>
+                    <li><strong>Select App 2 (ChatGPT):</strong> Optimize text for the specific platform.</li>
+                    <li><strong>Select App 3 (Social Platform):</strong> Create and publish the post.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CHAPTER 11 -->
+        <section id="ch11">
+            <h1>CHAPTER 11</h1>
+            <h2>The Zero-to-100k Roadmap</h2>
+            <div class="action-card">
+                <h3>The 3 Stages of the Machine</h3>
+                <ul>
+                    <li><strong>The Builder (0–1k Followers):</strong> Learning the tools and finding your voice.</li>
+                    <li><strong>The Optimizer (1k–10k Followers):</strong> Tuning the engine based on data.</li>
+                    <li><strong>The Machine (10k+ Followers):</strong> Scaling and hiring a VA to manage the parts you don't like.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section id="conclusion" style="text-align: center; border: none; padding-bottom: 150px;">
+            <h1>CONCLUSION: Your Empire Starts Now</h1>
+            <p>You now have the blueprints to a business that most people think is impossible. Remember: AI Multiplies Creativity, Consistency Beats Perfection, and Help Others Save Time.</p>
+            <div class="action-card" style="text-align: left; max-width: 600px; margin: 40px auto;">
+                <h3>Your 7-Day Fast Start Checklist</h3>
+                <p>Day 1: Set up Notion & Make.com<br>Day 2: Identify 4 Pillar Ideas<br>Day 3: Write 30 Days of Captions<br>Day 4: Batch Canva Visuals<br>Day 5: Record 5 Reels<br>Day 6: Launch Landing Page<br>Day 7: Post First Machine Asset</p>
+            </div>
+            <div style="margin-top: 60px; font-size: 14px; opacity: 0.6;">
+                Need help? Contact us: <a href="mailto:support@aicontentmachine.com" style="color: var(--primary);">support@aicontentmachine.com</a>
+            </div>
+        </section>
+
+        <!-- FULL 50 PROMPTS BONUS PACK -->
+        <section id="prompts" style="background: rgba(255,255,255,0.03); padding: 80px; border-radius: 40px;">
+            <h1 style="text-align: center; font-size: 56px;">🤖 THE 50 PROMPT PACK</h1>
+            <p style="text-align: center; font-size: 20px; color: var(--text-muted);">The Complete Collection. May 2026 Edition.</p>
+
+            <!-- SECTION 1 -->
+            <h2>📱 SECTION 1: SOCIAL MEDIA CAPTIONS</h2>
+            <div class="prompt-box"><strong>01 — Instagram Caption:</strong> "Write 5 Instagram captions for a [NICHE] creator about the topic '[YOUR TOPIC]'. Under 150 words, include 1 question, conversational tone."</div>
+            <div class="prompt-box"><strong>02 — TikTok Hook Generator:</strong> "Generate 10 powerful TikTok video hooks for '[YOUR TOPIC]'. Grab attention in 3 seconds. Under 15 words."</div>
+            <div class="prompt-box"><strong>03 — Viral Twitter Thread:</strong> "Write a 10-tweet Twitter thread about '[YOUR TOPIC]'. Hook -> 8 insights -> CTA."</div>
+            <div class="prompt-box"><strong>04 — LinkedIn Professional:</strong> "Write a LinkedIn post about '[YOUR TOPIC]' for [AUDIENCE]. Personal story + 3 lessons."</div>
+            <div class="prompt-box"><strong>05 — Pinterest Description:</strong> "Write 5 Pinterest descriptions for '[YOUR TOPIC]'. SEO-optimized + benefit-driven."</div>
+            <div class="prompt-box"><strong>06 — Instagram Carousel:</strong> "Write a 7-slide Instagram carousel script about '[YOUR TOPIC]'. Title -> 5 tips -> CTA."</div>
+            <div class="prompt-box"><strong>07 — YouTube Community:</strong> "Write 5 YouTube Community posts for [NICHE]. Mix questions, tips, and a poll idea."</div>
+            <div class="prompt-box"><strong>08 — Facebook Group:</strong> "Write a Facebook group post for [NICHE] providing massive value. Numbered list of 5 tips."</div>
+            <div class="prompt-box"><strong>09 — Story/Reel CTA:</strong> "Write 5 short Story scripts (10s each). Hook | Value | CTA."</div>
+            <div class="prompt-box"><strong>10 — 30-Day Calendar:</strong> "Create a 30-day Instagram caption calendar for [NICHE]. Theme + Caption + Hashtags."</div>
+
+            <!-- SECTION 2 -->
+            <h2>🎬 SECTION 2: VIDEO SCRIPTS</h2>
+            <div class="prompt-box"><strong>11 — 60s TikTok Script:</strong> "Write a 60-second TikTok script about '[YOUR TOPIC]'. Hook -> Problem -> Solution -> CTA."</div>
+            <div class="prompt-box"><strong>12 — YouTube Short:</strong> "Write a YouTube Shorts script (max 60s). scroll-stopping opening + 1 powerful insight."</div>
+            <div class="prompt-box"><strong>13 — Video Series Planner:</strong> "Create a 10-video series plan for [NICHE]. Title + Hook + Thumbnail idea."</div>
+            <div class="prompt-box"><strong>14 — Faceless Script:</strong> "Write a 2-minute faceless video script with B-roll suggestions and AI voiceover text."</div>
+            <div class="prompt-box"><strong>15 — Testimonial Request:</strong> "Write a non-pressuring script to ask for a video testimonial about '[YOUR PRODUCT]'."</div>
+            <div class="prompt-box"><strong>16 — Product Demo:</strong> "Write a 90-second product demo script. Problem -> Solution Reveal -> Walkthrough -> CTA."</div>
+            <div class="prompt-box"><strong>17 — Podcast Outline:</strong> "Create a full podcast episode outline for '[YOUR TOPIC]'. Hook + 5 talking points."</div>
+            <div class="prompt-box"><strong>18 — Webinar Outline:</strong> "Write a 45-minute webinar outline. Welcome -> Story -> Teaching -> Offer."</div>
+
+            <!-- SECTION 3 -->
+            <h2>✉️ SECTION 3: EMAIL MARKETING</h2>
+            <div class="prompt-box"><strong>19 — Welcome Email:</strong> "Write a warm welcome email for new subscribers. Subject + body + 1 quick win."</div>
+            <div class="prompt-box"><strong>20 — Nurture Sequence (5):</strong> "Write a 5-email nurture sequence leading to a $[PRICE] offer. Story -> Value -> Pitch."</div>
+            <div class="prompt-box"><strong>21 — Sales Email:</strong> "Write a persuasive sales email for '[PRODUCT]'. Urgency + 3 benefits + CTA."</div>
+            <div class="prompt-box"><strong>22 — Re-engagement:</strong> "Write a funny re-engagement email for cold subscribers. Acknowledge silence + value."</div>
+            <div class="prompt-box"><strong>23 — Newsletter Template:</strong> "Write a weekly newsletter template. Insight + Resource + Quote + CTA."</div>
+            <div class="prompt-box"><strong>24 — Abandoned Cart:</strong> "Write a 3-email abandoned cart sequence. Reminder -> Objection -> Urgency."</div>
+            <div class="prompt-box"><strong>25 — Launch Email:</strong> "Write a product launch announcement. excitement + price + P.S. bonus."</div>
+
+            <!-- SECTION 4 -->
+            <h2>💰 SECTION 4: SALES & LANDING PAGES</h2>
+            <div class="prompt-box"><strong>26 — Headline Generator:</strong> "Generate 20 high-converting landing page headlines for '[PRODUCT NAME]'."</div>
+            <div class="prompt-box"><strong>27 — Full Sales Copy:</strong> "Write a full sales page for '[PRODUCT]'. Headline -> Problem -> Solution -> FAQ."</div>
+            <div class="prompt-box"><strong>28 — Product Description:</strong> "Write a compelling description for [Gumroad/Etsy]. Transformation + 5 benefits."</div>
+            <div class="prompt-box"><strong>29 — FAQ Section:</strong> "Write 10 FAQ answers for a $[PRICE] product. Address beginners, access, refunds."</div>
+            <div class="prompt-box"><strong>30 — Testimonial Templates:</strong> "Write 5 realistic testimonial templates with before/after results."</div>
+            <div class="prompt-box"><strong>31 — Order Bump:</strong> "Write order bump copy for a $[PRICE] upsell. Headline + 3 benefits."</div>
+            <div class="prompt-box"><strong>32 — Pricing Table:</strong> "Write 3 pricing tier descriptions (Basic, Standard, Premium)."</div>
+            <div class="prompt-box"><strong>33 — Refund Policy:</strong> "Write a friendly, trust-building 30-day refund policy statement."</div>
+
+            <!-- SECTION 5 -->
+            <h2>📈 SECTION 5: BUSINESS & STRATEGY</h2>
+            <div class="prompt-box"><strong>34 — Niche Research:</strong> "Research [NICHE]. Pain points + desires + competitors + gaps."</div>
+            <div class="prompt-box"><strong>35 — Name Generator:</strong> "Generate 20 creative business names for a [NICHE] brand."</div>
+            <div class="prompt-box"><strong>36 — 30-Day Launch Plan:</strong> "Create a daily task list for a 4-week product launch."</div>
+            <div class="prompt-box"><strong>37 — Competitive Analysis:</strong> "Analyze top 3 competitors in [NICHE]. Table comparison."</div>
+            <div class="prompt-box"><strong>38 — 1-Page Biz Plan:</strong> "Write a 1-page business plan for [NICHE]. Mission + Revenue + Goals."</div>
+            <div class="prompt-box"><strong>39 — Content Pillar:</strong> "Define 5 content pillars with 10 ideas each for a [NICHE] creator."</div>
+            <div class="prompt-box"><strong>40 — Affiliate Program:</strong> "Write an affiliate program description offering [%] commission."</div>
+            <div class="prompt-box"><strong>41 — Lead Magnet Ideas:</strong> "Generate 15 lead magnet ideas to grow an email list in [NICHE]."</div>
+            <div class="prompt-box"><strong>42 — Press Release:</strong> "Write a professional press release for the launch of [BRAND]."</div>
+
+            <!-- SECTION 6 -->
+            <h2>🎨 SECTION 6: DESIGN & VISUAL</h2>
+            <div class="prompt-box"><strong>43 — Canva Design Brief:</strong> "Write a brief for a designer: Color palette + fonts + layout."</div>
+            <div class="prompt-box"><strong>44 — Midjourney Prompt:</strong> "Write 5 prompts for ebook cover art. Style: [modern/dark]."</div>
+            <div class="prompt-box"><strong>45 — Brand Identity:</strong> "Create personality + hex colors + typography pairing for [BRAND]."</div>
+            <div class="prompt-box"><strong>46 — Infographic Script:</strong> "Write content for a 7-section vertical infographic about [TOPIC]."</div>
+            <div class="prompt-box"><strong>47 — PDF Layout:</strong> "Describe the page-by-page layout for a 10-page PDF guide."</div>
+            <div class="prompt-box"><strong>48 — AI Image (Mockup):</strong> "Write a DALL-E prompt for a photorealistic product mockup on a MacBook."</div>
+            <div class="prompt-box"><strong>49 — Ad Creative Brief:</strong> "Write a Facebook/Instagram ad brief. 3 versions of primary text."</div>
+            <div class="prompt-box"><strong>50 — Notion Dashboard:</strong> "Describe a database layout for an AI content workflow in Notion."</div>
+
+            <p style="text-align: center; font-weight: 700; margin-top: 50px;">--- END OF MASTER PROMPT PACK ---</p>
+        </section>
+
+    </div>
+
+</body>
+</html>

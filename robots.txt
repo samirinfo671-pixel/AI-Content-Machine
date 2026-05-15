@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin.php
+Disallow: /sales.csv
+Disallow: /process_payment.php
+
+Sitemap: https://theaicontentmachine.co/sitemap.xml
