@@ -7,7 +7,7 @@ ini_set('display_errors', 0);
  */
 
 // 1. SECURE CONFIGURATION
-$public_key = '69ccb-597'; 
+$public_key = 'dcf73-608'; 
 $secret_key = '869ccbc481e2930d0f22ab5fbb41344e'; 
 
 // 2. RETRIEVE & SANITIZE DATA
