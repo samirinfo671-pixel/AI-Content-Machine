@@ -11,7 +11,7 @@ $cur   = isset($_GET['cur'])   ? strip_tags($_GET['cur'])   : 'USD';
 $hash  = isset($_GET['hash'])  ? strip_tags($_GET['hash'])  : '';
 
 // 2. SECURITY VERIFICATION (The "Best Way")
-$secret_key = '869ccbc481e2930d0f22ab5fbb41344e'; 
+$secret_key = 'adcf73c0c1bdcce5423c269698c0d960'; 
 $check_hash = hash('sha256', $order . $secret_key);
 
 if ($hash !== $check_hash || empty($email)) {
