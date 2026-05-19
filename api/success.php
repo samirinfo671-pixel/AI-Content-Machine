@@ -163,7 +163,7 @@ if (!empty($email)) {
             ttq.page();
         }(window, document, 'ttq');
 
-        // 2. Facebook Base
+        // 2. Meta Pixel Code
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -172,9 +172,12 @@ if (!empty($email)) {
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'YOUR_FACEBOOK_PIXEL_ID_HERE'); // <-- REPLACE WITH YOUR FB PIXEL ID
+        fbq('init', '763430750189229');
         fbq('track', 'PageView');
     </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=763430750189229&ev=PageView&noscript=1"
+    /></noscript>
 </head>
 <body>
 
